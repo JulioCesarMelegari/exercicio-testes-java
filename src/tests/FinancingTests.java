@@ -25,5 +25,15 @@ public class FinancingTests {
 			Financing f = new Financing(100000.0, 2000.0, 20);
 		});
 	}
+	
+	@Test
+	public void setTotalAmountShouldSetDataWhenValidData() {
+		
+		Financing f = new Financing(100000.0, 2000.0, 80);
+		
+		f.setTotalAmount(90000.0);
+		
+		Assertions.assertEquals(90000.0, f.getTotalAmount());
+	}
 
 }
